@@ -2,7 +2,7 @@
   "name": "a04-antud",
   "version": "1.0.0",
   "description": "a03 with API endpoints",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "node server.js --port=5555",
     "start": "node server.js"
