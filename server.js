@@ -25,7 +25,7 @@ app.get("/app", (req, res) => {
 });
 
 // Endpoint /app/rps/ that returns {"player":"(rock|paper|scissors)"}
-app.get("/app/rps/", (req, res) => {
-    res.status(200).json(rps());
+app.get("/app/rps", (req, res) => {
+    res.status(200).JSON.rps();
 });
 
