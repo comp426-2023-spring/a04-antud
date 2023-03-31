@@ -40,5 +40,5 @@ app.post('/app/rps/play/:shot', (req, res) => {
 });
 
 app.get('/app/rps/play/:shot', (req, res) => {
-    res.status(200).send(JSON.stringify(rps(get(req.params.shot))));
+    res.status(200).send(JSON.stringify(rps(req.query.shot)));
 });
