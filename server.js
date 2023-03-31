@@ -48,5 +48,5 @@ app.get('/app/rpsls/play/', (req, res) => {
 
 
 
-
-app.listen(port, () => { console.log("Server running on port %PORT%".replace("%PORT%", port)) });
+app.get('/app/*', (req, res) => { res.status(404).send("404 NOT FOUND"); });
+app.listen(port, () => { console.log("Server running on port %PORT%".replace("%PORT%", port)); });
