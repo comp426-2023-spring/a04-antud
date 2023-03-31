@@ -36,10 +36,13 @@ app.get('/app/rpsls/', (req, res) => {
 //or {"shot":"(rock|paper|scissors)"} (JSON) as data bodies and return {"player":"(rock|paper|scissors)",
 //"opponent":"(rock|paper|scissors)","result":"(win|lose|tie)"}
 
-app.get('/app/rps/play/', (req, res) => { 
+app.get('/app/rps/play/', (req, res) => { //url
     res.status(200).send(JSON.stringify(rps(req.query.shot)));
 });
 
+app.get('app/rps/play', (req, res) => {
+    res.status(200).send(JSON.stringify(rps(req.params.shot)));
+})
 
 
 
