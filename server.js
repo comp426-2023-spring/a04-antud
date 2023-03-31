@@ -40,9 +40,6 @@ app.get('/app/rps/play/', (req, res) => {
     res.status(200).send(JSON.stringify(rps(req.query.shot)));
 });
 
-app.get('/app/rpsls/play/', (req, res) => { 
-    res.status(200).send(JSON.stringify(rpsls(req.query.shot)));
-});
 
 
 
