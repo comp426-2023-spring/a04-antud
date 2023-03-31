@@ -18,7 +18,7 @@ let port = args.port || 5000 // default to 5000
 
 // READ (HTTP method GET) at root endpoint /app/
 // Check endpoint at /app/ that returns 200 OK
-app.get("/app", (req, res) => {
+app.get("/app/", (req, res) => {
 	res.status(200).send("200 OK");
 });
 
