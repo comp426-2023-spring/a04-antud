@@ -44,8 +44,3 @@ app.get('/app/rpsls/', (req, res) => {
 app.get('/app/rps/play/', (req, res) => {
     res.status(200).send(JSON.stringify(rps(req.params.shot)));
 });
-
-app.use(function(req, res) {
-    res.JSON({"message":"404 NOT FOUND"});
-    res.status(404);
-});
