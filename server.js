@@ -40,16 +40,20 @@ app.get('/app/rps/play/', (req, res) => { //url
     res.status(200).send(JSON.stringify(rps(req.query.shot)));
 });
 
-app.get('app/rps/play:shot', (req, res) => { //JSON
-    res.status(200).send(JSON.stringify(rps(req.body.shot)));
-})
-
-app.post('/app/rps/play/', (req, res) => { //data bodies
+app.get('/app/rps/play/:shot', (req, res) => { //data bodies
     res.status(200).send(JSON.stringify(rps(req.params.shot)));
 });
 
+app.post('app/rps/play/', (req, res) => { //JSON
+    res.status(200).send(JSON.stringify(rps(req.body.shot)));
+})
 
 
 
+
+
+//default gateway
 app.get('/app/*', (req, res) => { res.status(404).send("404 NOT FOUND"); });
+
+//root endpoint
 app.listen(port, () => { console.log("Server running on port %PORT%".replace("%PORT%", port)); });
