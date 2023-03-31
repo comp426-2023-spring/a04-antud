@@ -37,6 +37,15 @@ app.get('/app/rpsls/', (req, res) => {
 //"opponent":"(rock|paper|scissors)","result":"(win|lose|tie)"}
 
 
+// app.get('/app/rps/play/', (req, res) => {
+//     res.status(200).send(JSON.stringify(rps(req.query.shot)));
+// });
+
 app.get('/app/rps/play/', (req, res) => {
-    res.status(200).send(JSON.stringify(rps(req.query.shot)));
+    res.status(200).send(JSON.stringify(rps(req.params.shot)));
+});
+
+app.use(function(req, res) {
+    res.JSON({"message":"404 NOT FOUND"});
+    res.status(404);
 });
