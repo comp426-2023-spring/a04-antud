@@ -46,7 +46,20 @@ app.get('/app/rps/play/:shot', (req, res) => { //data bodies
 
 app.post('app/rps/play/', (req, res) => { //JSON
     res.status(200).send(JSON.stringify(rps(req.body.shot)));
-})
+});
+
+//now for rpsls
+app.get('/app/rpsls/play/', (req, res) => { //url
+    res.status(200).send(JSON.stringify(rpsls(req.query.shot)));
+});
+
+app.get('/app/rpsls/play/:shot', (req, res) => { //data bodies
+    res.status(200).send(JSON.stringify(rpsls(req.params.shot)));
+});
+
+app.post('app/rpsls/play/', (req, res) => { //JSON
+    res.status(200).send(JSON.stringify(rpsls(req.body.shot)));
+});
 
 
 
