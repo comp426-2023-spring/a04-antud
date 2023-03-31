@@ -41,11 +41,11 @@ app.get('/app/rps/play/', (req, res) => { //url
 });
 
 app.get('app/rps/play:shot', (req, res) => { //JSON
-    res.status(200).send(JSON.stringify(rps(req.params.shot)));
+    res.status(200).send(JSON.stringify(rps(req.body.shot)));
 })
 
 app.post('/app/rps/play/', (req, res) => { //data bodies
-    res.status(200).send(JSON.stringify(rps(req.body.shot)));
+    res.status(200).send(JSON.stringify(rps(req.params.shot)));
 });
 
 
