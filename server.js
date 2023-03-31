@@ -37,6 +37,6 @@ app.get('/app/rpsls/', (req, res) => {
 //"opponent":"(rock|paper|scissors)","result":"(win|lose|tie)"}
 
 
-app.get('/app/rps/play/:shot', (req, res) => {
+app.get('/app/rps/play/', (req, res) => {
     res.status(200).send(JSON.stringify(rps(req.params.shot)));
 });
