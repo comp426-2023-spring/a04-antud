@@ -15,8 +15,7 @@ app.use(express.urlencoded({extended: true}));
 
 // READ (HTTP method GET) at root endpoint /app/
 // Check endpoint at /app/ that returns 200 OK
-app.get("/app/", (req, res, next) => {
-    res.json({"message":"Your API works! (200) :)"});
+app.get("/app", (req, res, next) => {
 	res.status(200).send(200);
 });
 
