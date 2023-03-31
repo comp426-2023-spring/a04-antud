@@ -15,8 +15,8 @@ app.use(express.urlencoded({extended: true}));
 
 // READ (HTTP method GET) at root endpoint /app/
 // Check endpoint at /app/ that returns 200 OK
-app.get("/app", (req, res, next) => {
-	res.status(200).send(200);
+app.get("/app", (req, res) => {
+	res.status(200).send("200 OK");
 });
 
 // Endpoint /app/rps/ that returns {"player":"(rock|paper|scissors)"}
