@@ -17,7 +17,7 @@ app.use(express.urlencoded({extended: true}));
 // Check endpoint at /app/ that returns 200 OK
 app.get("/app/", (req, res, next) => {
     res.json({"message":"Your API works! (200) :)"});
-	res.status(200);
+	res.status(200).send(200);
 });
 
 // Endpoint /app/rps/ that returns {"player":"(rock|paper|scissors)"}
