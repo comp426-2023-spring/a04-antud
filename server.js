@@ -13,7 +13,7 @@ app.use(express.urlencoded({extended: true}));
 // server.js file that takes an arbitrary port number as a command line argument (i.e. I should be able to run it with node server.js --port=$PORTNUMBER). The port should default to 5000 if no argument is given.
 let port = args.port || 5000 // default to 5000
 
-//const server = app.listen(port, () => { console.log("Server running on port %PORT%".replace("%PORT%", port)) });
+
 // Format copied from database in-class exercise :p
 
 // READ (HTTP method GET) at root endpoint /app/
@@ -43,3 +43,10 @@ app.get('/app/rps/play/', (req, res) => {
 app.get('/app/rpsls/play/', (req, res) => { 
     res.status(200).send(JSON.stringify(rpsls(req.query.shot)));
 });
+
+
+
+
+
+
+app.listen(port, () => { console.log("Server running on port %PORT%".replace("%PORT%", port)) });
